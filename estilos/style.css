@@ -30,7 +30,9 @@ body{
 header{
   background-color: #0077ff;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
+  height: 50px;
 }
 nav#menu{
   padding: 1%;
@@ -44,6 +46,7 @@ nav#menu>ul{
 }
 nav#menu a{
   padding: 12px 15px;
+  font-size: 18px;
   font-weight: 600;
   text-decoration: none;
   color: var(--texto);
@@ -54,4 +57,56 @@ nav#menu a:hover{
   background-color: var(--destaque-inverso);
   color: var(--texto-inverso);
 
+}
+main{
+  display: grid;
+  grid-template-columns: auto 90vw auto;
+  gap: 20px;
+  margin-top: 20px;
+}
+#ficha{
+  grid-column: 2;
+  background-color: var(--fundo-card);
+  padding: 20px;
+  border-radius: 8px;
+}
+#ficha>img{
+  width: 200px;
+  aspect-ratio: 1/1;
+  margin-bottom: 15px;
+  margin: auto;
+  object-fit: cover;
+  overflow:hidden;
+  display: block;
+  border-radius: 50%;
+  border: 3px solid var(--fundo-card);
+  outline: 3px solid var(--destaque);
+}
+#ficha>h1{
+  font-size: 1.7em;
+  color: var(--destaque);
+  text-align: center;
+  margin: 10px;
+}
+#ficha>p{
+  font-size: 1em;
+  color: var(--texto-inverso);
+  text-align: justify;
+}
+#ficha>nav{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+#ficha a{
+  color:var(--destaque);
+  text-decoration: none;
+}
+#ficha a:hover{
+  color: var(--destaque-inverso);
+}
+#ficha>nav>a>i{
+  font-size: 2em;
 }
